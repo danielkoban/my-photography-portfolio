@@ -77,7 +77,6 @@ body {
 	align-items: center;
 	line-height: 30px;
 	color: #808080;
-	
 }
 
 .introducing__text--black {
@@ -195,7 +194,7 @@ body {
 		padding: 0
 	}
 
-	.gallery-slider {
+	.gallery__slider {
 		display: block;
 		overflow-y: scroll;
 	}
