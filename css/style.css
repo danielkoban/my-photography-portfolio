@@ -4,125 +4,130 @@
 	box-sizing: border-box;
 }
 
-body {
-	height: 100vh;
+html {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 }
 
-header {
-	padding: 0 5%;
+body {
+	height: 100vh;
+}
+
+.navbar {
 	display: flex;
 	height: 10vh;
 	justify-content: space-between;
 	align-items: center;
+	padding: 0 5%;
 }
 
-header h1 {
-	color: #4169E1;
-	font-size: 36px;
+.navbar__logo {
 	font-family: 'Caveat', cursive;
+	font-size: 36px;
+	color: #4169E1;
 }
 
-h1 a {
+.navbar-logo__link {
 	text-decoration: none;
 	color: #4169e1;
 }
 
-nav ul {
-	list-style: none;
+.menu__list {
 	display: flex;
 	height: 100%;
 	justify-content: flex-end;
+	list-style: none;
 }
 
-nav li {
+.menu-list__element {
 	margin-left: 15px;
 }
 
-nav a {
+.menu-list-element__link {
+	padding: 2px 3px;
 	text-decoration: none;
 	color: #000000;
-	padding: 2px 3px;
 }
 
-nav a:hover {
+.menu-list-element__link:hover {
 	background-color: #ffff00;
 	cursor: pointer;
 }
 
-.active {
+.menu-list-element__link--active {
 	background-color: #ffff00;
 }
 
-#menu-button {
+.hamburger {
 	display: none;
-	color: #000000;
 	font-size: 36px;
+	color: #000000;
+	
 }
 
-main {
+.introducing, .gallery, .information {
 	height: 90vh;
 	padding: 0 5%;
 }
 
-#introducing {
+.introducing {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: #808080;
 	line-height: 30px;
+	color: #808080;
+	
 }
 
-#introducing span {
+.introducing__text--black {
 	color: #000000;
 }
 
 /* SERIES #1 and SERIES #2 */
 
-main .slider {
-	height: 100%;
+.gallery__slider {
 	display: flex;
+	height: 100%;
 	justify-content: space-around;
 	align-items: center;
 }
 
-main .gallery img {
-	max-width: 800px;
+.gallery-slider-list__element {
 	display: none;
+	max-width: 800px;
 }
 
-main .gallery img.show {
+.gallery-slider-list__element--show {
 	display: inline-block;
 }
 
-#prev:hover, #next:hover{
+.gallery-slider__button:hover{
 	transform: scale(2);
 	cursor: pointer;
 }
 
 /* ABOUT */
 
-#information {
+.information {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
 
-main .about {
+.information__about {
 	flex-basis: 60%;
 	line-height: 30px;
 }
 
-.about p {
+.information-about__text {
 	margin-bottom: 5%;
 }
 
-#bold {
-	color: #000000;
+.information-about__text--bold {
 	font-weight: bold;
 	text-decoration: none;
+	color: #000000;
 }
 
 .social-media {
@@ -130,7 +135,7 @@ main .about {
 	justify-content: space-around;
 }
 
-.social-media a {
+.social-media__link {
 	color: #000000;
 	font-size: 36px;
 }
@@ -138,40 +143,40 @@ main .about {
 /* RWD */
 
 @media (max-width: 992px) {
-	header h1 {
+	.navbar__logo {
 		font-size: 24px;
 	}
 
-	nav	{
+	.menu	{
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-color: #ffff00;
 		width: 100%;
 		height: 100%;
 		display: none;
 		z-index: 50;
+		background-color: #ffff00;
 	}
 
-	nav ul {
+	.menu__list {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
 
-	nav li {
+	.menu-list__element {
 		margin-bottom: 20px;
 	}
 
-	nav a {
+	.menu-list-element__link {
 		font-size: 24px;
 	}
 
-	#menu-button {
+	.hamburger {
 		display: flex;
-		cursor: pointer;
-		font-size: 24px;
 		z-index: 100;
+		font-size: 24px;
+		cursor: pointer;
 	}
 
 	.full-screen-menu {
@@ -182,51 +187,51 @@ main .about {
 		transform: rotate(45deg);
 	}
 
-	#prev, #next {
+	.gallery-slider__button {
 		display: none;
 	}
 
-	#gallery-slider {
+	.gallery {
 		padding: 0
 	}
 
-	main .slider {
+	.gallery-slider {
 		display: block;
 		overflow-y: scroll;
 	}
 
-	main .gallery {
+	.gallery-slider__list {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
 
-	main .gallery img {
-		width: 100%;
+	.gallery-slider-list__element  {
 		display: block;
+		width: 100%;
 		margin-bottom: 5%;
 	}
 
-	main .about {
+	.information__about {
 		flex-basis: 90%;
 	}
 
-	main p {
+	.information-about__text {
 		font-size: 14px;
 		line-height: 20px;
 	}
 
-	.social-media a {
+	.social-media__link {
 		font-size: 20px;
 	}
 
 	@media (max-width: 992px) and (orientation: landscape) {
-		main .about {
+		.information__about {
 			flex-basis: 95%;
 		}
 
-		main p {
+		.information-about__text {
 			font-size: 12px;
 		}
 	}
