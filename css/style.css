@@ -54,7 +54,7 @@ body {
 	cursor: pointer;
 }
 
-.menu-list-element__link--active {
+.active {
 	background-color: #ffff00;
 }
 
@@ -97,7 +97,7 @@ body {
 	max-width: 800px;
 }
 
-.gallery-slider-list__element--show {
+.show {
 	display: inline-block;
 }
 
